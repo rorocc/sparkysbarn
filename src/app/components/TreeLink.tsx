@@ -4,7 +4,7 @@ export default function TreeLink(props: Props) {
     return (
         <a href={props.url} className={'group'}>
             <div
-                className={'relative border-pink-200 bg-white/50 border rounded text-black px-4 py-3 hover:bg-pink-100 hover:cursor-pointer'}>
+                className={'relative border-pink-200 bg-white/50 border rounded-lg text-black px-4 py-3 hover:bg-pink-100 hover:cursor-pointer'}>
                 <div className={'flex flex-row gap-4 align-center items-center'}>
                     <div className={'max-w-4'}>{props.icon}</div>
                     <p>{props.label}</p>
