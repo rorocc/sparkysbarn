@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Modak } from "next/font/google";
 import "./globals.css";
+import GooseProgressFlag from "@/app/components/GooseProgressFlag";
+import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${modak.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <body
+        className={`${geistSans.variable} ${geistMono.variable} ${modak.variable} min-h-screen flex flex-col justify-between antialiased`}
+    >
+    {children}
+    <Footer />
+    </body>
     </html>
   );
 }
