@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: "de_DE",
     type: "website",
     images: [{
-      url:'/og-image.jpg',
+      url:'https://sparkysbarn.de/og-image.jpg',
       width: 1200,
       height: 630,
       alt: "Cute Sticker mit Pride und ohne KI"
