@@ -21,11 +21,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SparkysBarn – Sticker mit Pride und ohne KI",
-  description: "Zeige klare Haltung mit unseren handgemachten Sticker über Pride und weitere Themen – hauptsache mit süßen TIeren und ganz ohne KI für dich gedruckt.",
+  title: "SparkysBarn – Sticker mit Pride und ohne KI 🏳️‍🌈",
+  description: "Zeige klare Haltung mit unseren handgemachten Sticker über Pride und weitere Themen – hauptsache mit süßen Tieren und ganz ohne KI für dich gedruckt.",
   openGraph: {
-    title: "SparkysBarn – Sticker mit Pride und ohne KI",
-    description: "Zeige klare Haltung mit unseren handgemachten Sticker über Pride und weitere Themen – hauptsache mit süßen TIeren und ganz ohne KI für dich gedruckt.",
+    title: "SparkysBarn – Sticker mit Pride und ohne KI 🏳️‍🌈",
+    description: "Zeige klare Haltung mit unseren handgemachten Sticker über Pride und weitere Themen – hauptsache mit süßen Tieren und ganz ohne KI für dich gedruckt.",
     url: "https://sparkysbarn.de",
     siteName: "SparkysBarn",
     locale: "de_DE",
