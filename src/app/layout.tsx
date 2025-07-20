@@ -35,6 +35,11 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630,
       alt: "Cute Sticker mit Pride und ohne KI"
+    },{
+      url:'https://sparkysbarn.de/og-image-square.jpg',
+      width: 512,
+      height: 512,
+      alt: "Cute Sticker mit Pride und ohne KI"
     }]
   }
 };
