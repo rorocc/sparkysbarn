@@ -1,8 +1,8 @@
-import GooseProgressFlag from "@/app/components/GooseProgressFlag";
+import GooseProgressFlag from "@/components/GooseProgressFlag";
 
 export default function Footer(){
     return(
-        <footer className={'mt-48 lg:mt-10'}>
+        <footer className={'md:mt-8 mt-50'}>
             <div className={'relative '}>
                 <img src={'/grass.svg'}
                      aria-hidden={true} alt={''}/>

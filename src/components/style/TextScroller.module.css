@@ -1,0 +1,26 @@
+.scrollerOuter {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.scrollerInner {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 13s linear infinite;
+}
+
+.scrollerContent {
+    display: inline-flex;
+    padding-right: 0.5rem; /* Abstand zwischen Wiederholungen */
+}
+
+/* Keyframes für die Bewegung */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
