@@ -47,9 +47,19 @@ export default function Home() {
                                       title={'Gans Sonnenbrille "Homophobia is for silly fucks" | ohne KI | Handgemachter Vinyl Freiform Sticker | Silly Goose Cute Ente'}
                                       label={'Chris\' Choice'}/>
                                   <TreeProduct
+                                      imgUrl={'https://i.etsystatic.com/58598025/c/1530/1530/287/849/il/9caf07/7107590552/il_600x600.7107590552_onfh.jpg'}
+                                      url={'https://sparkysbarn.etsy.com/listing/4334303624'}
+                                      title={'Gans Progress Flag "Being straight was never an option" | ohne KI | Handgemachter Vinyl Freiform Sticker | Silly Goose Cute Ente'}
+                                  />
+                                  <TreeProduct
                                       imgUrl={'https://i.etsystatic.com/58598025/c/2008/2008/92/586/il/aab93b/7043110821/il_600x600.7043110821_ixzr.jpg'}
                                       url={'https://sparkysbarn.etsy.com/de/listing/4308807221/aufkleber-dino-bi-pride-flag'}
                                       title={'Dino Bi Pride Flag Aufkleber | Freiform Sticker Vinyl'}
+                                  />
+                                  <TreeProduct
+                                      imgUrl={'https://i.etsystatic.com/58598025/r/il/2d6db7/7107563210/il_600x600.7107563210_qd0d.jpg'}
+                                      url={'https://sparkysbarn.etsy.com/listing/4351504489'}
+                                      title={'Frosch Demo Schild "Fick Nazis" | ohne KI | Handgemachter Vinyl Freiform Sticker | Cute Frog'}
                                   />
                                   <TreeProduct
                                       imgUrl={'https://i.etsystatic.com/58598025/c/2045/2045/102/640/il/afc93e/7043147315/il_800x800.7043147315_hae2.jpg'}
