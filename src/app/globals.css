@@ -30,7 +30,7 @@ body {
 header{
   width: 100%;
   position: relative;
-  @apply pb-8 md:pb-0;
+  @apply pb-8 md:pb-0 overflow-visible;
 }
 
 header:before{
@@ -41,12 +41,12 @@ header:before{
 header:after {
   content: "";
   background-image: url("/bg-divider.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-x;
+  background-size: auto;
   background-position: center;
   position: absolute;
   left: 0;
   z-index: -1;
   width: 100%;
-  @apply h-[60%] md:h-[100%] top-8;
+  @apply h-[60%] md:h-[100%] top-8 bg-cover md:bg-auto;
 }

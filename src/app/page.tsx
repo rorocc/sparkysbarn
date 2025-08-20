@@ -19,16 +19,6 @@ export default function Home() {
                   <div className={'relative w-full overflow-visible'}>
                       <div className={'flex flex-col gap-4'}>
                           <div className={'max-w-96 m-auto'}>
-                              {isInRange && (
-                                  <div className={'w-full bg-cute-pink py-2 px-4 rounded-full -rotate-2 mt-2 mb-8'}>
-                                      <TextScroller>
-                                          <img src={'hf-word.webp'} alt={'Hey Highfield Party People'} height={'3rem'}
-                                               className={'h-10 pr-2'}/>
-                                          <img src={'hf-word-2.webp'} alt={'Hey Highfield Party People'} height={'3rem'}
-                                               className={'h-10'}/>
-                                      </TextScroller>
-                                  </div>
-                              )}
                               <img src={'heading.webp'}
                                    height={'1.75rem'}
                                    width={'auto'}
