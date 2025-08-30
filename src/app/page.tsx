@@ -32,9 +32,9 @@ export default function Home() {
                                       title={'Zauberer Gans "Hocus Pocus I can\'t Focus" | ohne KI | Handgemachter Vinyl Freiform Sticker | Silly Goose Cute Ente'}
                                       label={'Chicis Choice'}/>
                                   <TreeProduct
-                                      imgUrl={'https://i.etsystatic.com/58598025/c/1875/1875/187/752/il/1ad006/7092573708/il_800x800.7092573708_k20e.jpg'}
-                                      url={'https://sparkysbarn.etsy.com/de/listing/4348687495/gans-sonnenbrille-homophobia-is-for'}
-                                      title={'Gans Sonnenbrille "Homophobia is for silly fucks" | ohne KI | Handgemachter Vinyl Freiform Sticker | Silly Goose Cute Ente'}
+                                      imgUrl={'https://i.etsystatic.com/58598025/c/1859/1859/159/719/il/a83cea/7204108287/il_600x600.7204108287_eiap.jpg'}
+                                      url={'https://sparkysbarn.etsy.com/listing/4360543227'}
+                                      title={'10 Stück Sticker "Homophobia is for silly fucks" | Gans mit Pride Flagge | ohne KI gestaltet'}
                                       label={'Chris\' Choice'}/>
                                   <TreeProduct
                                       imgUrl={'https://i.etsystatic.com/58598025/c/1530/1530/287/849/il/9caf07/7107590552/il_600x600.7107590552_onfh.jpg'}
