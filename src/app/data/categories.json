@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Pride", "id": "category-pride", "highlight":true
+  },
+  {
+    "label": "Feminismus", "id": "category-feminism", "highlight":true
+  },
+  {
+    "label": "ADHD", "id": "category-adhd", "highlight":true
+  },
+  {
+    "label": "Gaming", "id": "", "highlight":false
+  },
+  {
+    "label": "Gänse", "id": "", "highlight":false
+  }
+]

@@ -1,0 +1,30 @@
+.AccordionTriggerIcon{
+    transition: 250ms ease;
+}
+
+.AccordionTrigger[data-state='open'] .AccordionTriggerIcon {
+    transform: rotate(45deg);
+}
+
+.AccordionTrigger[data-state='open'] {
+    border-radius: 16px 16px 0 0;
+}
+
+.AccordionTrigger[data-state='closed'] {
+    border-radius: 16px;
+}
+
+.AccordionContent {
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-radius: 0 0 16px 16px;
+    margin-top: 1px;
+}
+
+.AccordionContent[data-state='open'] {
+    display: block;
+}
+
+.AccordionContent[data-state='closed'] {
+    display: none;
+}

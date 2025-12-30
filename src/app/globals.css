@@ -1,30 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdeef6;
+  --background: #FFFBF6;
   --foreground: #171717;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sora);
+  --font-display: "Barlow Condensed", sans-serif;
   --color-cute-pink: #FFF9FD;
   --color-sparky-pink: #e8a2c7;
-}
+  --color-primary: #D972AA;
+  --color-primary-subtle: #FFF1FB;
+  --color-secondary: #5366BD;
+  --color-secondary-subtle: #E1EFFF;
+  --spacing-global: 1rem;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-rotate: rotate 25s linear infinite;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #fdeef6;
-    --foreground: #ededed;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Sora, sans-serif;
+}
+
+h2{
+  @apply text-2xl font-bold mt-0;
 }
 
 header{
@@ -36,17 +63,4 @@ header{
 header:before{
   content: "";
   @apply bg-cute-pink absolute top-0 w-full h-[30%] -z-10;
-}
-
-header:after {
-  content: "";
-  background-image: url("/bg-divider.svg");
-  background-repeat: repeat-x;
-  background-size: auto;
-  background-position: center;
-  position: absolute;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  @apply h-[60%] md:h-[100%] top-8 bg-cover md:bg-auto;
 }

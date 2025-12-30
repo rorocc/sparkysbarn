@@ -5,8 +5,8 @@ export default function ButtonCTA(props: Props){
     return (
         <>
             <a href={props.url} target={'_blank'}>
-                <div className={styles.blank + '  bg-stretch-x bg-sparky-pink/40 flex flex-row gap-2 pl-4 pr-3 py-1.5 hover:opacity-75 transition w-fit rounded-2xl text-black/90'}>
-                    <p>{props.label}</p>
+                <div className={styles.blank + '  bg-stretch-x bg-primary-subtle flex flex-row gap-2 pl-4 pr-3 py-1.5 hover:opacity-75 transition w-fit rounded-2xl text-primary'}>
+                    <p className={'font-bold'}>{props.label}</p>
                     <svg width={'1rem'} id="Layer_1" fill={'currentColor'} viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
                         <path

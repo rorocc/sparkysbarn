@@ -1,25 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Modak } from "next/font/google";
+import { Sora, Rammetto_One, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
-import GooseProgressFlag from "@/components/GooseProgressFlag";
+import GooseProgressFlag from "@/components/art/GooseProgressFlag";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
 });
 
-const modak = Modak({
-    variable: "--font-modak",
-    weight: "400",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const rammettoOne = Rammetto_One({
+  variable: "--font-rammetto-one",
+  weight: "400",
   subsets: ["latin"],
 });
+
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
+  weight: "900",
+  subsets: ["latin"],
+})
 
 export const metadata: Metadata = {
   title: "SparkysBarn – Sticker mit Pride und ohne KI 🏳️‍🌈",
@@ -52,14 +53,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-    <body
-        className={`${geistSans.variable} ${geistMono.variable} ${modak.variable} min-h-screen flex flex-col justify-between antialiased`}
-    >
-    <Header />
-    {children}
-    <Footer/>
-    </body>
+      <body
+          className={`${sora.variable} ${rammettoOne.variable} min-h-screen flex flex-col justify-between antialiased`}
+      >
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }

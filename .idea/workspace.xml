@@ -5,8 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef8a2c96-f80e-4e67-b8a7-533b1920388e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/decoration/flower.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/decoration/heart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/decoration/starbeam.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/flags/ace.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/flags/bi.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/flags/enby.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/flags/gay.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/flags/lesbian.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/flags/progress.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/flags/trans.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/footer/sparkys_wordmark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CurvedMarquee.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/style/Marquee.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonCTA.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GooseProgressFlag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/art/GooseProgressFlag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/style/TextScroller.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/style/TextScroller.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +57,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chris/Documents/GitHub/sparkysbarn/src/app/components&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chris/Documents/GitHub/sparkysbarn/src/app/legal/impressum&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -47,10 +69,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/legal/impressum" />
+      <recent name="$PROJECT_DIR$/src/app/blog" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/app/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/public/img/decoration" />
+      <recent name="$PROJECT_DIR$/src/components/art" />
+      <recent name="$PROJECT_DIR$/public/img/global" />
+      <recent name="$PROJECT_DIR$/public/img/footer" />
+      <recent name="$PROJECT_DIR$/public/img/flags" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -83,6 +112,14 @@
       <workItem from="1754932496778" duration="14841000" />
       <workItem from="1755164473592" duration="237000" />
       <workItem from="1756575307372" duration="88000" />
+      <workItem from="1761517725671" duration="2198000" />
+      <workItem from="1761562660461" duration="32321000" />
+      <workItem from="1761754835768" duration="13221000" />
+      <workItem from="1761930452234" duration="7000" />
+      <workItem from="1762284744755" duration="8306000" />
+      <workItem from="1764454287143" duration="532000" />
+      <workItem from="1766772534589" duration="36527000" />
+      <workItem from="1767051217271" duration="2175000" />
     </task>
     <servers />
   </component>
