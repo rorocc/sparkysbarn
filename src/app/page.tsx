@@ -76,7 +76,7 @@ export default function Home() {
 
     return (
         <>
-            <Header />
+            <Header/>
             <div className={'w-full overflow-hidden -translate-y-[33%] -rotate-1'}>
                 <div className={'bg-primary w-[120%]'}>
                     <TextScroller>
@@ -88,11 +88,12 @@ export default function Home() {
                 <div className={'tablecloth w-full h-full absolute -z-1'}/>
                 <div>
                     <div className={'container mx-auto p-global py-12 text-center'}>
-                    <div className={'flex bg-white px-4 py-2 w-fit mx-auto my-12'}>
+                        <div className={'flex bg-white px-4 py-2 w-fit mx-auto my-12'}>
                             <h2 className={'uppercase text-black/75'}>Ein paar unserer <span
                                 className={'text-primary'}>schönsten</span> Sticker</h2>
                         </div>
-                        <div className={'grid md:grid-cols-3 grid-cols-2 md:gap-12 gap-6 items-center mx-auto justify-center'}>
+                        <div
+                            className={'grid md:grid-cols-3 grid-cols-2 md:gap-12 gap-6 items-center mx-auto justify-center'}>
                             {
                                 topItems.map((item: any, index: number) => (
                                     <div key={item["_container"]}
@@ -134,7 +135,8 @@ export default function Home() {
                                 Alle Pride Sticker
                             </a>
                         </div>
-                        <div className={'grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 justify-center md:justify-start'}>
+                        <div
+                            className={'grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 justify-center md:justify-start'}>
                             {
                                 prideItems.map((item: any, index: number) => (
                                     <div key={item["_container"]}>
@@ -156,7 +158,7 @@ export default function Home() {
                 <div>
                     <div className={'container mx-auto p-global py-12'}>
                         <h2 className={'mb-4'}>ADHD Sticker</h2>
-                        <div className={'grid grid-cols-2 md:grid-cols-4 gap-4 justify-center md:justify-start'}>
+                        <div className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
                             {
                                 adhdItems.map((item: any, index: number) => (
                                     <ProductCard title={item["v2-listing-card--title"]}
@@ -173,11 +175,12 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            
             <section>
                 <div>
                     <div className={'container mx-auto p-global py-12'}>
                         <h2 className={'mb-4'}>Wie wär's hier mit?</h2>
-                        <div className={'grid grid-cols-2 md:grid-cols-4 gap-4 justify-center md:justify-start'}>
+                        <div className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
                             {
                                 items.filter((i) => {
                                     return wieWaersStickerIds.includes(i.id)

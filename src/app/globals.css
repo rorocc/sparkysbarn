@@ -23,6 +23,7 @@ html {
   --spacing-global: 1rem;
   --animate-wiggle: wiggle 1s ease-in-out infinite;
   --animate-rotate: rotate 25s linear infinite;
+  --animate-fade-in-left: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
   @keyframes wiggle {
     0%,
@@ -63,4 +64,29 @@ header{
 header:before{
   content: "";
   @apply bg-cute-pink absolute top-0 w-full h-[30%] -z-10;
+}
+
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
