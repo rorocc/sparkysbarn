@@ -113,28 +113,19 @@ export default function Home() {
                 </div>
             </section>
             <section id={'category-pride'} className={'articleWindow-cloud'}>
-                <div className={'bg-secondary-subtle py-8'}>
-                    <div className={'container flex md:flex-row flex-col mx-auto p-global py-4 relative gap-4'}>
-                        <PrideCircle className={'w-36 right-5 -top-38 absolute bottom-80 rotate-16'}/>
-                        <div
-                            className={'min-w-70 md:max-w-86 flex flex-col bg-white rounded-lg p-4 h-fit md:sticky top-4 mx-auto'}>
-                            <div className={'flex w-full justify-between space-between mb-4'}>
-                                <h2 className={'text-sm'}>
-                                    <span className={'text-pink-500'}>Be loud</span>
-                                    <br/>
-                                    <span className={'text-sky-400'}>Be proud</span>
-                                </h2>
-                                <img src={'/img/global/rainbow-ui-sticker.svg'}
-                                     className={'right-0 -top-2 md:absolute bottom-80 md:w-fit w-20 rotate-16'}/>
+                <div className={'bg-secondary-subtle pb-4'}>
+                    <div className={'w-full text-center pt-6 pb-18'}>
+                        <div className={'mx-auto w-full my-4'}>
+                            <img src={'/img/decoration/pride-typo.svg'} className={'max-w-[25rem] w-full mx-auto'}
+                                 alt={'Pride'}/>
+                            <div
+                                className={'mx-auto -rotate-2 translate-y-[-50%] bg-primary w-fit rounded-full px-4 border-2 uppercase font-bold text-black border-black py-1'}>
+                                <span>Be loud, be proud</span>
                             </div>
-                            <p className={'opacity-75'}>
-                                Sei laut und zeige mit diesen Aufklebern, wer du bist ❤
-                            </p>
-                            <a href={'https://sparkysbarn.etsy.com/?section_id=54686929'} target={'_blank'}
-                               className={'py-2 mt-12 px-2 text-center bg-sky-100 hover:bg-sky-200/90 text-sky-800 rounded-xl'}>
-                                Alle Pride Sticker
-                            </a>
                         </div>
+                        <p>Sei du selbst, zeig wer du bist ❤</p>
+                    </div>
+                    <div className={'container flex md:flex-row flex-col mx-auto p-global py-4 relative gap-4'}>
                         <div
                             className={'grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 justify-center md:justify-start'}>
                             {
@@ -152,13 +143,20 @@ export default function Home() {
                             }
                         </div>
                     </div>
+                    <div className={'w-full text-center py-8'}>
+                        <a href={'https://sparkysbarn.etsy.com/?section_id=54686929'} target={'_blank'}
+                           className={'py-4 mt-12 px-6 text-center bg-white hover:bg-white/75 text-sky-800 rounded-xl'}>
+                            Alle Pride Sticker ansehen
+                        </a>
+                    </div>
                 </div>
             </section>
             <section id={'category-adhd'}>
                 <div>
                     <div className={'container mx-auto p-global py-12'}>
                         <h2 className={'mb-4'}>ADHD Sticker</h2>
-                        <div className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
+                        <div
+                            className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
                             {
                                 adhdItems.map((item: any, index: number) => (
                                     <ProductCard title={item["v2-listing-card--title"]}
@@ -175,12 +173,43 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            
+            <section id={'section-about-us'}>
+                <div className={''}>
+                    <div className={'container mx-auto p-global py-12 bg-primary-subtle rounded-3xl'}>
+                        <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 gap-4 items-center">
+                            <div className="col-start-1 row-start-1 pl-8">
+                                <h2
+                                className={'mb-4 text-primary uppercase'}>Willkommen <br/> in der <span className={'bg-primary text-primary-subtle px-2 rounded-sm'}>Sparky</span> Family!</h2>
+                                <p className={'max-w-[60ch]'}>
+                                    Hi – wir sind Chici & Chris. <br/>
+                                    <br/>
+                                    In Zeiten wie diesen ist es uns besonders wichtig, Position zu beziehen und <strong>für mehr
+                                    Liebe, Gleichgerechtigkeit und Toleranz einzustehen</strong>. Warum also nicht auf eine süße Art und Weise?
+                                    Mit Stickern von süßen Tieren!
+                                    <br/>
+                                    <br/>
+                                    Bei uns gibt es nur liebevoll gestaltete Kunst, wobei wir bei der Gestaltung all
+                                    unserer Produkte <strong>auf die Nutzung von künstlicher Intelligenz verzichten.</strong>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    Flauschige Grüße aus Leipzig
+                                </p>
+                                <img className={'max-h-6 mt-2'} src={'/img/decoration/signature.png'} alt={'Chici und Chris'} />
+                            </div>
+                            <div className="md:col-start-2 col-start-1 md:row-start-1 row-start-2">
+                                <PrideCircle className={'w-full max-w-80 rotate-16 mx-auto my-auto'}/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section>
                 <div>
                     <div className={'container mx-auto p-global py-12'}>
                         <h2 className={'mb-4'}>Wie wär's hier mit?</h2>
-                        <div className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
+                        <div
+                            className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
                             {
                                 items.filter((i) => {
                                     return wieWaersStickerIds.includes(i.id)
