@@ -4,6 +4,7 @@ import ButtonCTA from "@/components/ButtonCTA";
 import TextScroller from "@/components/TextScroller";
 import Navbar from "@/components/Navbar";
 import categories from "@/app/data/categories.json"
+import HeaderSparky from "@/components/art/HeaderSparky";
 
 export default function Header() {
     return (
@@ -14,7 +15,7 @@ export default function Header() {
                 overflow: 'hidden'
             }}>
                 <img src={'/grass.svg'} className={'w-full absolute md:-bottom-[5%] bottom-5'}/>
-                <img src={'/img/global/index_header_sparky.svg'} className={'absolute right-[-5%] -bottom-[30%] md:block hidden'}/>
+                <HeaderSparky className={'absolute right-[-5%] -bottom-[30%] md:block hidden'} />
                 <div className={'mx-auto'}>
                     <div className={'container mx-auto pb-8 px-4 relative'}>
                         <Navbar/>
