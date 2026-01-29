@@ -26,7 +26,7 @@ export default function Header() {
                                 Setze ein Zeichen für Gleichberechtigung & Liebe mit unseren liebevoll gestalteten und
                                 produzierten Aufklebern, die für alle da sind.
                             </p>
-                            <div className={'mt-6 flex flex-row gap-2 w-full md:justify-start justify-center'}>
+                            <div className={'mt-6 flex flex-row gap-2 w-full md:justify-start justify-center md:mb-16 mb-0'}>
                                 {
                                     categories.filter(i => {
                                         return i.highlight

@@ -14,6 +14,7 @@ import ButtonCTA from "@/components/ButtonCTA";
 import CurvedMarquee from "@/components/CurvedMarquee";
 import PrideCircle from "@/components/art/PrideCircle";
 import Header from "@/components/Header";
+import FadeIn from "@/components/gsap/FadeIn";
 
 const tickerText = "CUTE STICKER  ❤  GANZ OHNE KI  ❤  LOVE & PRIDE  ❤  CUTE MENSCHEN  ❤  ";
 const beliebteStickerIds = [4,13,10,5];
@@ -94,20 +95,22 @@ export default function Home() {
                         </div>
                         <div
                             className={'grid md:grid-cols-3 grid-cols-2 md:gap-12 gap-6 items-center mx-auto justify-center'}>
-                            {
-                                topItems.map((item: any, index: number) => (
-                                    <div key={item["_container"]}
-                                         className={'md:odd:translate-y-5 odd:rotate-1 even:-rotate-2 w-fit'}>
-                                        <ProductCard title={item["v2-listing-card--title"]}
-                                                     id={item["_container"]}
-                                                     url={item["_container_link"]}
-                                                     img={item["wt-image--cover"]}
-                                                     category={""}
-                                                     price={item['currency-value']}
-                                        />
-                                    </div>
-                                ))
-                            }
+                                {
+                                    topItems.map((item: any, index: number) => (
+                                        <div key={item["_container"]}
+                                             className={'md:odd:translate-y-5 odd:rotate-1 even:-rotate-2 w-fit'}>
+                                            <FadeIn delay={index*0.2}>
+                                                <ProductCard title={item["v2-listing-card--title"]}
+                                                             id={item["_container"]}
+                                                             url={item["_container_link"]}
+                                                             img={item["wt-image--cover"]}
+                                                             category={""}
+                                                             price={item['currency-value']}
+                                                />
+                                            </FadeIn>
+                                        </div>
+                                    ))
+                                }
                         </div>
                     </div>
                 </div>
@@ -115,14 +118,17 @@ export default function Home() {
             <section id={'category-pride'} className={'articleWindow-cloud'}>
                 <div className={'bg-secondary-subtle pb-4'}>
                     <div className={'w-full text-center pt-6 pb-18'}>
-                        <div className={'mx-auto w-full my-4'}>
-                            <img src={'/img/decoration/pride-typo.svg'} className={'max-w-[25rem] w-full mx-auto'}
-                                 alt={'Pride'}/>
-                            <div
-                                className={'mx-auto -rotate-2 translate-y-[-50%] bg-primary w-fit rounded-full px-4 border-2 uppercase font-bold text-black border-black py-1'}>
-                                <span>Be loud, be proud</span>
+                        <FadeIn>
+                            <div className={'mx-auto w-full my-4'}>
+                                <img src={'/img/decoration/pride-typo.svg'} className={'max-w-[25rem] w-full mx-auto'}
+                                     alt={'Pride'}/>
+                                <div
+                                    className={'mx-auto -rotate-2 translate-y-[-50%] bg-primary w-fit rounded-full px-4 border-2 uppercase font-bold text-black border-black py-1'}>
+                                    <span>Be loud, be proud</span>
+                                </div>
                             </div>
-                        </div>
+                        </FadeIn>
+
                         <p>Sei du selbst, zeig wer du bist ❤</p>
                     </div>
                     <div className={'container flex md:flex-row flex-col mx-auto p-global py-4 relative gap-4'}>
@@ -131,13 +137,15 @@ export default function Home() {
                             {
                                 prideItems.map((item: any, index: number) => (
                                     <div key={item["_container"]}>
-                                        <ProductCard title={item["v2-listing-card--title"]}
-                                                     id={item["_container"]}
-                                                     url={item["_container_link"]}
-                                                     img={item["wt-image--cover"]}
-                                                     category={"Pride"}
-                                                     price={item['currency-value']}
-                                                     key={index}/>
+                                        <FadeIn>
+                                            <ProductCard title={item["v2-listing-card--title"]}
+                                                         id={item["_container"]}
+                                                         url={item["_container_link"]}
+                                                         img={item["wt-image--cover"]}
+                                                         category={"Pride"}
+                                                         price={item['currency-value']}
+                                                         key={index}/>
+                                        </FadeIn>
                                     </div>
                                 ))
                             }
@@ -159,27 +167,29 @@ export default function Home() {
                             className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
                             {
                                 adhdItems.map((item: any, index: number) => (
-                                    <ProductCard title={item["v2-listing-card--title"]}
-                                                 id={item["_container"]}
-                                                 url={item["_container_link"]}
-                                                 img={item["wt-image--cover"]}
-                                                 category={"Adhd"}
-                                                 price={item['currency-value']}
-                                                 className={'max-w-56'}
-                                                 key={index}/>
+                                    <FadeIn key={index+'_adhds'}>
+                                        <ProductCard title={item["v2-listing-card--title"]}
+                                                     id={item["_container"]}
+                                                     url={item["_container_link"]}
+                                                     img={item["wt-image--cover"]}
+                                                     category={"Adhd"}
+                                                     price={item['currency-value']}
+                                                     className={'max-w-56'}
+                                                     />
+                                    </FadeIn>
                                 ))
                             }
                         </div>
                     </div>
                 </div>
             </section>
-            <section id={'section-about-us'}>
+            <section id={'section-about-us'} className={'my-16'}>
                 <div className={''}>
                     <div className={'container mx-auto p-global py-12 bg-primary-subtle rounded-3xl'}>
                         <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 gap-4 items-center">
                             <div className="col-start-1 row-start-1 pl-8">
                                 <h2
-                                className={'mb-4 text-primary uppercase'}>Willkommen <br/> in der <span className={'bg-primary text-primary-subtle px-2 rounded-sm'}>Sparky</span> Family!</h2>
+                                className={'mb-8 text-primary uppercase'}>Willkommen <br/> in der <span className={'bg-primary text-primary-subtle px-2 rounded-sm'}>Sparky</span> Family!</h2>
                                 <p className={'max-w-[60ch]'}>
                                     Hi – wir sind Chici & Chris. <br/>
                                     <br/>
@@ -214,13 +224,15 @@ export default function Home() {
                                 items.filter((i) => {
                                     return wieWaersStickerIds.includes(i.id)
                                 }).map((item: any, index: number) => (
-                                    <ProductCard title={item.title}
-                                                 id={item.id}
-                                                 url={item.url}
-                                                 img={item.img}
-                                                 category={item.category}
-                                                 className={'max-w-56'}
-                                                 key={index}/>
+                                    <FadeIn key={index+'_wwms'}>
+                                        <ProductCard title={item.title}
+                                                     id={item.id}
+                                                     url={item.url}
+                                                     img={item.img}
+                                                     category={item.category}
+                                                     className={'max-w-56'}
+                                        />
+                                    </FadeIn>
                                 ))
                             }
                         </div>
@@ -239,14 +251,17 @@ export default function Home() {
                         <div className={'grid grid-cols-2 md:grid-cols-4 gap-4 justify-center md:justify-start'}>
                             {
                                 feminismItems.map((item: any, index: number) => (
-                                    <ProductCard title={item["v2-listing-card--title"]}
-                                                 id={item["_container"]}
-                                                 url={item["_container_link"]}
-                                                 img={item["wt-image--cover"]}
-                                                 category={"Feminism"}
-                                                 price={item['currency-value']}
-                                                 className={'max-w-56'}
-                                                 key={index}/>
+                                    <FadeIn key={index+'_fems'}>
+                                        <ProductCard title={item["v2-listing-card--title"]}
+                                                     id={item["_container"]}
+                                                     url={item["_container_link"]}
+                                                     img={item["wt-image--cover"]}
+                                                     category={"Feminism"}
+                                                     price={item['currency-value']}
+                                                     className={'max-w-56'}
+                                                     />
+                                    </FadeIn>
+
                                 ))
                             }
                         </div>
