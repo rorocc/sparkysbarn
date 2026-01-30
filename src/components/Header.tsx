@@ -15,7 +15,6 @@ export default function Header() {
                 overflow: 'hidden'
             }}>
                 <img src={'/grass.svg'} className={'w-full absolute md:-bottom-[5%] bottom-5'}/>
-                <HeaderSparky className={'absolute right-[-5%] -bottom-[30%] md:block hidden'} />
                 <div className={'mx-auto'}>
                     <div className={'container mx-auto pb-8 px-4 relative'}>
                         <Navbar/>
@@ -45,6 +44,7 @@ export default function Header() {
                         <img src={'/img/decoration/flower.svg'} className={'w-16 absolute md:top-[25%] top-[12%] left-[65%] animate-rotate'}/>
                     </div>
                 </div>
+                <HeaderSparky className={'absolute right-[-5%] -bottom-[30%] md:block hidden'} />
             </header>
     )
 }

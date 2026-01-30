@@ -185,11 +185,11 @@ export default function Home() {
             </section>
             <section id={'section-about-us'} className={'my-16'}>
                 <div className={''}>
-                    <div className={'container mx-auto p-global py-12 bg-primary-subtle rounded-3xl'}>
-                        <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 gap-4 items-center">
+                    <div className={'container mx-auto p-global md:py-16 py-12 bg-primary-subtle rounded-4xl md:-rotate-1 rotate-0'}>
+                        <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 gap-4 items-center md:rotate-1 rotate-0">
                             <div className="col-start-1 row-start-1 pl-8">
-                                <h2
-                                className={'mb-8 text-primary uppercase'}>Willkommen <br/> in der <span className={'bg-primary text-primary-subtle px-2 rounded-sm'}>Sparky</span> Family!</h2>
+                                <p
+                                className={'mb-8 text-primary uppercase md:text-5xl text-3xl font-display md:text-left text-center'}>Willkommen <br/> in der <span className={'bg-primary text-primary-subtle px-2 pb-1 leading-relaxed rounded-sm'}>Sparky</span> Family!</p>
                                 <p className={'max-w-[60ch]'}>
                                     Hi – wir sind Chici & Chris. <br/>
                                     <br/>
