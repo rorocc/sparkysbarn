@@ -68,6 +68,12 @@ export default function Footer(){
                                 <li>
                                     <Link href={'/'}>Startseite</Link>
                                 </li>
+                                <li>
+                                    <Link href={'/legal/impressum'}>Impressum</Link>
+                                </li>
+                                <li>
+                                    <Link href={'/legal/datenschutz'}>Datenschutz</Link>
+                                </li>
                             </ul>
                         </div>
                         <div className={'flex flex-col'}>
