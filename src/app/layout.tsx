@@ -4,6 +4,7 @@ import "./globals.css";
 import GooseProgressFlag from "@/components/art/GooseProgressFlag";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -23,10 +24,18 @@ const barlowCondensed = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  title: "SparkysBarn – Sticker mit Pride und ohne KI 🏳️‍🌈",
+  metadataBase: new URL("https://sparkysbarn.de"),
+  title: {
+    default: "SparkysBarn – Sticker mit Pride und gestaltet ohne KI",
+    template: "%s | SparkysBarn – Sticker mit Pride und gestaltet ohne KI",
+  },
   description: "Zeige klare Haltung mit unseren handgemachten Sticker über Pride und weitere Themen – hauptsache mit süßen Tieren und ganz ohne KI für dich gedruckt.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
-    title: "SparkysBarn – Sticker mit Pride und ohne KI 🏳️‍🌈",
+    title: "SparkysBarn – Sticker mit Pride und gestaltet ohne KI 🏳️‍🌈",
     description: "Zeige klare Haltung mit unseren handgemachten Sticker über Pride und weitere Themen – hauptsache mit süßen Tieren und ganz ohne KI für dich gedruckt.",
     url: "https://sparkysbarn.de",
     siteName: "SparkysBarn",
@@ -54,10 +63,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-          className={`${sora.variable} ${rammettoOne.variable} min-h-screen flex flex-col justify-between antialiased`}
+        className={`${sora.variable} ${rammettoOne.variable} min-h-screen flex flex-col justify-between antialiased`}
       >
         {children}
         <Footer/>
+        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
       </body>
     </html>
   );

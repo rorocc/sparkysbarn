@@ -19,6 +19,7 @@ export default function Navbar() {
                         <div className={'md:flex flex-row gap-6 text-black hidden'}>
                             <Link href={'/'}>Startseite</Link>
                             <Link href={'/#faq'}>FAQ</Link>
+                            <Link href={'/blog'}>Blog</Link>
                         </div>
                         <div>
                             <ButtonCTA url={'https://sparkysbarn.etsy.com'} label={'Zum Shop'} />

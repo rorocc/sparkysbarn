@@ -51,10 +51,6 @@ body {
   font-family: Sora, sans-serif;
 }
 
-h2{
-  @apply text-2xl font-bold mt-0;
-}
-
 header{
   width: 100%;
   position: relative;
