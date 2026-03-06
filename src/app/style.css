@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+h2{
+    @apply font-bold text-2xl;
+}
+
 .cloud{
     background-image: url('data:image/svg+xml;utf8,<svg width="422" height="233" viewBox="0 0 422 233" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="75.1026" cy="120.785" r="73.3848" transform="rotate(-0.855054 75.1026 120.785)" fill="#FFECF7"/> <circle cx="136.695" cy="77.5921" r="73.3848" transform="rotate(-0.855054 136.695 77.5921)" fill="#FFECF7"/> <circle cx="149.539" cy="151.38" r="73.3848" transform="rotate(-0.855054 149.539 151.38)" fill="#FFECF7"/> <circle cx="235.313" cy="76.1194" r="73.3848" transform="rotate(-0.855054 235.313 76.1194)" fill="#FFECF7"/> <circle cx="250.593" cy="155.743" r="73.3848" transform="rotate(-0.855054 250.593 155.743)" fill="#FFECF7"/> <circle cx="323.907" cy="105.8" r="73.3848" transform="rotate(-0.855054 323.907 105.8)" fill="#FFECF7"/> </svg> ');
 }
