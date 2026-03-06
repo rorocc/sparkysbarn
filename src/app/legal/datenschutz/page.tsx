@@ -129,7 +129,14 @@ export default function Home() {
                                 </a>
                                 </p>
 
-                                <h2>8. Ihre Rechte nach DSGVO</h2>
+                                <h2>8. Tracking</h2>
+                                <p>
+                                    Auf dieser Website wird SimpleAnalytics verwendet – ein datenschutzfreundlicher Analysedienst der Simple Analytics B.V. (Niederlande). Simple Analytics erfasst keine personenbezogenen Daten und setzt keine Cookies. Es werden ausschließlich aggregierte, anonyme Nutzungsstatistiken erhoben – etwa Seitenaufrufe und Herkunftsland des Besuchs – ohne individuelle Nutzerprofile zu erstellen oder IP-Adressen zu speichern.
+                                    Da keine personenbezogenen Daten verarbeitet werden, ist für den Einsatz von Simple Analytics keine Einwilligung nach Art. 6 DSGVO erforderlich.
+                                    Weitere Informationen zum Datenschutz bei Simple Analytics findest du unter: simpleanalytics.com/privacy
+                                </p>
+
+                                <h2>9. Ihre Rechte nach DSGVO</h2>
                                 <p>
                                     Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:
                                 </p>
@@ -145,14 +152,14 @@ export default function Home() {
                                     Außerdem steht Ihnen ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.
                                 </p>
 
-                                <h2>9. SSL- bzw. TLS-Verschlüsselung</h2>
+                                <h2>10. SSL- bzw. TLS-Verschlüsselung</h2>
                                 <p>
                                     Diese Website nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung.
                                     Eine verschlüsselte Verbindung erkennen Sie an „https://“ in der Adresszeile Ihres
                                     Browsers.
                                 </p>
 
-                                <h2>10. Hinweis</h2>
+                                <h2>11. Hinweis</h2>
                                 <p>
                                     Diese Datenschutzerklärung stellt keine Rechtsberatung dar. Trotz sorgfältiger
                                     Erstellung
