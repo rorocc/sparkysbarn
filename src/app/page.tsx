@@ -15,6 +15,7 @@ import CurvedMarquee from "@/components/CurvedMarquee";
 import PrideCircle from "@/components/art/PrideCircle";
 import Header from "@/components/Header";
 import FadeIn from "@/components/gsap/FadeIn";
+import Carousel from "@/components/Carousel";
 
 const tickerText = "CUTE STICKER  ❤  GANZ OHNE KI  ❤  LOVE & PRIDE  ❤  CUTE MENSCHEN  ❤  ";
 const beliebteStickerIds = [4,13,10,5];
@@ -95,29 +96,29 @@ export default function Home() {
                         </div>
                         <div
                             className={'grid md:grid-cols-3 grid-cols-2 md:gap-12 gap-6 items-center mx-auto justify-center'}>
-                                {
-                                    topItems.map((item: any, index: number) => (
-                                        <div key={item["_container"]}
-                                             className={'md:odd:translate-y-5 odd:rotate-1 even:-rotate-2 w-fit'}>
-                                            <FadeIn delay={index*0.2}>
-                                                <ProductCard title={item["v2-listing-card--title"]}
-                                                             id={item["_container"]}
-                                                             url={item["_container_link"]}
-                                                             img={item["wt-image--cover"]}
-                                                             category={""}
-                                                             price={item['currency-value']}
-                                                />
-                                            </FadeIn>
-                                        </div>
-                                    ))
-                                }
+                            {
+                                topItems.map((item: any, index: number) => (
+                                    <div key={item["_container"]}
+                                         className={'md:odd:translate-y-5 odd:rotate-1 even:-rotate-2 w-fit'}>
+                                        <FadeIn delay={index * 0.2}>
+                                            <ProductCard title={item["v2-listing-card--title"]}
+                                                         id={item["_container"]}
+                                                         url={item["_container_link"]}
+                                                         img={item["wt-image--cover"]}
+                                                         category={""}
+                                                         price={item['currency-value']}
+                                            />
+                                        </FadeIn>
+                                    </div>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
             </section>
             <section id={'category-pride'} className={'articleWindow-cloud'}>
-                <div className={'bg-secondary-subtle pb-4'}>
-                    <div className={'w-full text-center pt-6 pb-18'}>
+                <div className={'bg-secondary-subtle'}>
+                    <div className={'w-full text-center pt-6'}>
                         <FadeIn>
                             <div className={'mx-auto w-full my-4'}>
                                 <img src={'/img/decoration/pride-typo.svg'} className={'max-w-[25rem] w-full mx-auto'}
@@ -131,12 +132,12 @@ export default function Home() {
 
                         <p>Sei du selbst, zeig wer du bist ❤</p>
                     </div>
-                    <div className={'container flex md:flex-row flex-col mx-auto p-global py-4 relative gap-4'}>
-                        <div
-                            className={'grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 justify-center md:justify-start'}>
+                    <div className={'container flex md:flex-row flex-col mx-auto p-global relative gap-4'}>
+                        <Carousel className={'w-full mx-auto py-12'} fadeColor={'var(--color-secondary-subtle)'}>
                             {
                                 prideItems.map((item: any, index: number) => (
-                                    <div key={item["_container"]}>
+                                    <div key={item["_container"]}
+                                         className={'snap-start flex-shrink-0 md:w-[260px] w-48 py-8'}>
                                         <FadeIn>
                                             <ProductCard title={item["v2-listing-card--title"]}
                                                          id={item["_container"]}
@@ -149,9 +150,9 @@ export default function Home() {
                                     </div>
                                 ))
                             }
-                        </div>
+                        </Carousel>
                     </div>
-                    <div className={'w-full text-center py-8'}>
+                    <div className={'w-full text-center pb-8'}>
                         <a href={'https://sparkysbarn.etsy.com/?section_id=54686929'} target={'_blank'}
                            className={'py-4 mt-12 px-6 text-center bg-white hover:bg-white/75 text-sky-800 rounded-xl'}>
                             Alle Pride Sticker ansehen
@@ -162,79 +163,25 @@ export default function Home() {
             <section id={'category-adhd'}>
                 <div>
                     <div className={'container mx-auto p-global py-12'}>
-                        <h2 className={'mb-4'}>ADHD Sticker</h2>
-                        <div
-                            className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
-                            {
-                                adhdItems.map((item: any, index: number) => (
-                                    <FadeIn key={index+'_adhds'}>
-                                        <ProductCard title={item["v2-listing-card--title"]}
-                                                     id={item["_container"]}
-                                                     url={item["_container_link"]}
-                                                     img={item["wt-image--cover"]}
-                                                     category={"Adhd"}
-                                                     price={item['currency-value']}
-                                                     className={'max-w-56'}
-                                                     />
-                                    </FadeIn>
-                                ))
-                            }
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id={'section-about-us'} className={'my-16'}>
-                <div className={''}>
-                    <div className={'container mx-auto p-global md:py-16 py-12 bg-primary-subtle rounded-4xl md:-rotate-1 rotate-0'}>
-                        <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 gap-4 items-center md:rotate-1 rotate-0">
-                            <div className="col-start-1 row-start-1 pl-8">
-                                <p
-                                className={'mb-8 text-primary uppercase md:text-5xl text-3xl font-display md:text-left text-center'}>Willkommen <br/> in der <span className={'bg-primary text-primary-subtle px-2 pb-1 leading-relaxed rounded-sm'}>Sparky</span> Family!</p>
-                                <p className={'max-w-[60ch]'}>
-                                    Hi – wir sind Chici & Chris. <br/>
-                                    <br/>
-                                    In Zeiten wie diesen ist es uns besonders wichtig, Position zu beziehen und <strong>für mehr
-                                    Liebe, Gleichgerechtigkeit und Toleranz einzustehen</strong>. Warum also nicht auf eine süße Art und Weise?
-                                    Mit Stickern von süßen Tieren!
-                                    <br/>
-                                    <br/>
-                                    Bei uns gibt es nur liebevoll gestaltete Kunst, wobei wir bei der Gestaltung all
-                                    unserer Produkte <strong>auf die Nutzung von künstlicher Intelligenz verzichten.</strong>
-                                    <br />
-                                    <br />
-                                    <br />
-                                    Flauschige Grüße aus Leipzig
-                                </p>
-                                <img className={'max-h-6 mt-2'} src={'/img/decoration/signature.png'} alt={'Chici und Chris'} />
-                            </div>
-                            <div className="md:col-start-2 col-start-1 md:row-start-1 row-start-2">
-                                <PrideCircle className={'w-full max-w-80 rotate-16 mx-auto my-auto'}/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div>
-                    <div className={'container mx-auto p-global py-12'}>
-                        <h2 className={'mb-4'}>Wie wär's hier mit?</h2>
-                        <div
-                            className={'grid grid-cols-2 md:grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-4 justify-center md:justify-start'}>
-                            {
-                                items.filter((i) => {
-                                    return wieWaersStickerIds.includes(i.id)
-                                }).map((item: any, index: number) => (
-                                    <FadeIn key={index+'_wwms'}>
-                                        <ProductCard title={item.title}
-                                                     id={item.id}
-                                                     url={item.url}
-                                                     img={item.img}
-                                                     category={item.category}
-                                                     className={'max-w-56'}
-                                        />
-                                    </FadeIn>
-                                ))
-                            }
+                        <div className={'container flex md:flex-row flex-col mx-auto p-global relative gap-4'}>
+                            <Carousel className={'w-full mx-auto'} title={'ADHD Sticker'}>
+                                {
+                                    adhdItems.map((item: any, index: number) => (
+                                        <div key={item["_container"]}
+                                             className={'snap-start flex-shrink-0 md:w-[260px] w-48 py-8'}>
+                                            <FadeIn>
+                                                <ProductCard title={item["v2-listing-card--title"]}
+                                                             id={item["_container"]}
+                                                             url={item["_container_link"]}
+                                                             img={item["wt-image--cover"]}
+                                                             category={"Adhd"}
+                                                             price={item['currency-value']}
+                                                             key={index}/>
+                                            </FadeIn>
+                                        </div>
+                                    ))
+                                }
+                            </Carousel>
                         </div>
                     </div>
                 </div>
@@ -247,23 +194,61 @@ export default function Home() {
             <section id={'category-feminism'}>
                 <div>
                     <div className={'container mx-auto p-global py-12'}>
-                        <h2 className={'mb-4'}>Feministische Sticker</h2>
-                        <div className={'grid grid-cols-2 md:grid-cols-4 gap-4 justify-center md:justify-start'}>
+                        <Carousel className={'w-full mx-auto'} title={'Feministische Sticker'}>
                             {
                                 feminismItems.map((item: any, index: number) => (
-                                    <FadeIn key={index+'_fems'}>
-                                        <ProductCard title={item["v2-listing-card--title"]}
-                                                     id={item["_container"]}
-                                                     url={item["_container_link"]}
-                                                     img={item["wt-image--cover"]}
-                                                     category={"Feminism"}
-                                                     price={item['currency-value']}
-                                                     className={'max-w-56'}
-                                                     />
-                                    </FadeIn>
-
+                                    <div key={item["_container"]}
+                                         className={'snap-start flex-shrink-0 md:w-[260px] w-48 py-8'}>
+                                        <FadeIn>
+                                            <ProductCard title={item["v2-listing-card--title"]}
+                                                         id={item["_container"]}
+                                                         url={item["_container_link"]}
+                                                         img={item["wt-image--cover"]}
+                                                         category={"Feminism"}
+                                                         price={item['currency-value']}
+                                                         key={index}/>
+                                        </FadeIn>
+                                    </div>
                                 ))
                             }
+                        </Carousel>
+                    </div>
+                </div>
+            </section>
+            <section id={'section-about-us'} className={'my-16'}>
+                <div className={''}>
+                    <div
+                        className={'container mx-auto p-global md:py-16 py-12 bg-primary-subtle rounded-4xl md:-rotate-1 rotate-0'}>
+                        <div
+                            className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 gap-4 items-center md:rotate-1 rotate-0">
+                            <div className="col-start-1 row-start-1 pl-8">
+                                <p
+                                    className={'mb-8 text-primary uppercase md:text-5xl text-3xl font-display md:text-left text-center'}>Willkommen <br/> in
+                                    der <span
+                                        className={'bg-primary text-primary-subtle px-2 pb-1 leading-relaxed rounded-sm'}>Sparky</span> Family!
+                                </p>
+                                <p className={'max-w-[60ch]'}>
+                                    In Zeiten wie diesen ist es uns besonders wichtig, Position zu beziehen und <strong>für
+                                    mehr
+                                    Liebe, Gleichgerechtigkeit und Toleranz einzustehen</strong>. Warum also nicht auf
+                                    eine süße Art und Weise?
+                                    Mit Stickern von süßen Tieren!
+                                    <br/>
+                                    <br/>
+                                    Bei uns gibt es nur liebevoll gestaltete Kunst, wobei wir bei der Gestaltung all
+                                    unserer Produkte <strong>auf die Nutzung von künstlicher Intelligenz
+                                    verzichten.</strong>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    Flauschige Grüße aus Leipzig
+                                </p>
+                                <img className={'max-h-6 mt-2'} src={'/img/decoration/signature.png'}
+                                     alt={'Chici und Chris'}/>
+                            </div>
+                            <div className="md:col-start-2 col-start-1 md:row-start-1 row-start-2">
+                                <PrideCircle className={'w-full max-w-80 rotate-16 mx-auto my-auto'}/>
+                            </div>
                         </div>
                     </div>
                 </div>
