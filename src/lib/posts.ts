@@ -8,7 +8,15 @@ export interface PostMeta {
     slug: string;
     title: string;
     date: string;
+    author: string;
+    dateModified?: string;
     description: string;
+    thumbnail: string;
+    thumbnail_source?: string;
+    thumbnail_alt?: string;
+    categories: string[];
+
+
 }
 
 export function getAllPosts(): PostMeta[] {

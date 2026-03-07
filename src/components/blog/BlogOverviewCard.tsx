@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-type Props = {post: object, className?: string, rotation?: string};
+import {PostMeta} from "@/lib/posts";
+type Props = {post: PostMeta, className?: string, rotation?: string};
 
 export default function BlogOverviewCard(props: Props){
 
