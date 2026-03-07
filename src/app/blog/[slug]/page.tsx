@@ -9,7 +9,9 @@ import Carousel from "@/components/Carousel";
 
 export async function generateStaticParams() {
     const slugs = getAllPostSlugs();
-    console.log("slugs:", slugs);
+    if (slugs.length === 0) {
+        return [{ slug: "_placeholder" }];
+    }
     return slugs;
 }
 

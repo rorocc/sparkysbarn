@@ -34,8 +34,6 @@ export function getAllPosts(): PostMeta[] {
 }
 
 export function getAllPostSlugs() {
-    console.log("postsDirectory:", postsDirectory);
-    console.log("exists:", fs.existsSync(postsDirectory));
     return getAllPosts() // ← getAllPosts statt readdirSync, erbt den Filter
         .map((post) => ({ slug: post.slug }));
 }
