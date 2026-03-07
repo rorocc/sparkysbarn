@@ -18,7 +18,7 @@ export default function BlogOverviewCard(props: Props){
                 <div className={'flex md:flex-row flex-col md:gap-8 gap-6 items-center'}>
                     <div className={'w-full md:aspect-square rounded-xl overflow-hidden'}>
                         <Image src={props.post.thumbnail}
-                               alt={props.post.thumbnail_alt}
+                               alt={props.post.thumbnail_alt ?? ""}
                                width={'500'} height={'500'} className={'object-cover w-full h-full'}/>
                     </div>
                     <div className={'flex flex-col gap-4 text-md leading-tight'}>
