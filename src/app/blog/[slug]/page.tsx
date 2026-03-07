@@ -8,7 +8,8 @@ import type { Metadata } from "next";
 import Carousel from "@/components/Carousel";
 
 export async function generateStaticParams() {
-    return getAllPostSlugs();
+    const slugs = getAllPostSlugs();
+    return slugs;
 }
 
 const components = {};
