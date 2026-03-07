@@ -32,11 +32,13 @@ export default async function PostPage({params,}: { params: Promise<{ slug: stri
         year: "numeric"
     });
 
-    const dateModifiedFormatted = new Date(frontmatter?.dateModified).toLocaleDateString("de-DE", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    });
+    const dateModifiedFormatted = frontmatter?.dateModified
+        ? new Date(frontmatter.dateModified).toLocaleDateString("de-DE", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+        })
+        : null;
 
     const jsonLd = {
         "@context": "https://schema.org",

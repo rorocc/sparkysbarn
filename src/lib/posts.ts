@@ -9,6 +9,7 @@ export interface PostMeta {
     title: string;
     date: string;
     author: string;
+    status: "published" | "draft";
     dateModified?: string;
     description: string;
     thumbnail: string;
@@ -20,27 +21,21 @@ export interface PostMeta {
 }
 
 export function getAllPosts(): PostMeta[] {
-    if (!fs.existsSync(postsDirectory)) return [];
-
     return fs
         .readdirSync(postsDirectory)
         .filter((name) => name.endsWith(".mdx"))
         .map((fileName) => {
             const slug = fileName.replace(/\.mdx$/, "");
-            const fullPath = path.join(postsDirectory, fileName);
-            const { data } = matter(fs.readFileSync(fullPath, "utf8"));
+            const { data } = matter(fs.readFileSync(path.join(postsDirectory, fileName), "utf8"));
             return { slug, ...data } as PostMeta;
         })
+        .filter((post) => post.status === "published") // ← Drafts rausfiltern
         .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export function getAllPostSlugs() {
-    if (!fs.existsSync(postsDirectory)) return [];
-
-    return fs
-        .readdirSync(postsDirectory)
-        .filter((name) => name.endsWith(".mdx"))
-        .map((fileName) => ({ slug: fileName.replace(/\.mdx$/, "") }));
+    return getAllPosts() // ← getAllPosts statt readdirSync, erbt den Filter
+        .map((post) => ({ slug: post.slug }));
 }
 
 export async function getPostBySlug(slug: string) {
