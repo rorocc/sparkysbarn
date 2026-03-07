@@ -86,7 +86,7 @@ export default async function PostPage({params,}: { params: Promise<{ slug: stri
                     </div>
                 </header>
                 <section className={'max-w-[65ch] mx-auto py-8'}>
-                    <MDXRemote source={content} components={{...mdxComponents, components}}/>
+                    <MDXRemote source={content} components={{...mdxComponents, ...components}}/>
                 </section>
                 <footer className={'max-w-[65ch] mx-auto'}>
                     <div className={'mt-12'}>
