@@ -3,6 +3,7 @@ import { getAllPosts } from "@/lib/posts";
 import Navbar from "@/components/Navbar";
 import BlogOverviewCard from "@/components/blog/BlogOverviewCard";
 import TextScroller from "@/components/TextScroller";
+import type { Metadata } from "next";
 
 export default function BlogPage() {
     const posts = getAllPosts();
