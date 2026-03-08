@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ef8a2c96-f80e-4e67-b8a7-533b1920388e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/blog/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/posts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/posts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/blog/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/blog/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/data/blog/authors.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/blog/authors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/data/items/pride.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data/items/pride.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog/authorBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/blog/authorBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/posts/csd-leipzig-2026.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/posts/csd-leipzig-2026.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,28 +41,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaScript Debug.localhost:3001.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "/Users/christopherrock/Documents/GitHub/sparkysbarn",
+    "last_opened_file_path": "/Users/christopherrock/Documents/GitHub/sparkysbarn/src/components/blog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Users/christopherrock/Documents/GitHub/sparkysbarn/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/blog" />
       <recent name="$PROJECT_DIR$/src/content/posts" />
       <recent name="$PROJECT_DIR$/src/app/legal" />
       <recent name="$PROJECT_DIR$/src/components/art" />
       <recent name="$PROJECT_DIR$/src/app/legal/impressum" />
-      <recent name="$PROJECT_DIR$/src/app/blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/mdx" />
@@ -65,8 +75,11 @@
       <recent name="$PROJECT_DIR$/public/img/footer" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Next.js: server-side">
+  <component name="RunManager" selected="JavaScript Debug.localhost:3001">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="localhost:3001" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3001">
       <method v="2" />
     </configuration>
     <configuration name="Next.js: server-side" type="js.build_tools.npm">
@@ -79,6 +92,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:3001" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -124,7 +142,7 @@
       <workItem from="1769799477646" duration="5441000" />
       <workItem from="1771161941833" duration="1797000" />
       <workItem from="1772554691022" duration="33030000" />
-      <workItem from="1772894602354" duration="1964000" />
+      <workItem from="1772894602354" duration="18402000" />
     </task>
     <servers />
   </component>

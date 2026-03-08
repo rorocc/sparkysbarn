@@ -6,6 +6,8 @@ import Navbar from "@/components/Navbar";
 import AuthorBlock from "@/components/blog/authorBlock";
 import type { Metadata } from "next";
 import Carousel from "@/components/Carousel";
+import ProductCarouselPride from "@/components/blog/ProductCarouselPride";
+import Sources from "@/components/mdx/Sources";
 
 export async function generateStaticParams() {
     const slugs = getAllPostSlugs();
@@ -15,7 +17,7 @@ export async function generateStaticParams() {
     return slugs;
 }
 
-const components = {};
+const components = {ProductCarouselPride};
 
 // src/app/blog/[slug]/page.tsx
 export default async function PostPage({params,}: { params: Promise<{ slug: string }>; // ← Promise!
@@ -44,32 +46,43 @@ export default async function PostPage({params,}: { params: Promise<{ slug: stri
         })
         : null;
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: frontmatter.title,
-        description: frontmatter.description,
-        datePublished: frontmatter.date,
-        dateModified: frontmatter.dateModified,
-        author: {
-            "@type": "Person",
-            name: frontmatter.author,
+    const jsonLd = [
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: frontmatter.title,
+            description: frontmatter.description,
+            datePublished: frontmatter.date,
+            dateModified: frontmatter.dateModified,
+            author: {
+                "@type": "Person",
+                name: frontmatter.author || "SparkysBarn",
+            },
+            image: frontmatter.thumbnail,
+            url: `https://sparkysbarn.de/blog/${slug}`,
         },
-        image: frontmatter.thumbnail,
-        url: `https://meineblog.de/blog/${slug}`,
-    };
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sparkysbarn.de" },
+                { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://sparkysbarn.de/blog" },
+                { "@type": "ListItem", "position": 3, "name": frontmatter.title, "item": `https://sparkysbarn.de/blog/${slug}` },
+            ],
+        },
+    ];
 
     return (
-        <div>
-            <article className={'w-full mx-auto pb-24 leading-loose'}>
+        <>
+            <article className={'w-full mx-auto leading-loose'}>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
                 />
-                <header className={'w-full bg-primary/5'}>
-                    <Navbar/>
-                    <div className={'max-w-[75ch] mx-auto py-8 flex flex-col gap-4'}>
-                        <div className={'flex flex-row gap-2 mb-2 text-sm items-center flex-wrap'}>
+                <header className={'w-full bg-primary-subtle'}>
+                    <div className={'max-w-[75ch] mx-auto pb-8 flex flex-col gap-4 p-global'}>
+                        <Navbar/>
+                        <div className={'flex flex-row gap-2 mb-2 mt-12 text-sm items-center flex-wrap'}>
                             {
                                 frontmatter.categories.map((category: String, index: number) => (
                                     <div key={'categoryTag' + index}
@@ -77,10 +90,10 @@ export default async function PostPage({params,}: { params: Promise<{ slug: stri
                                 ))
                             }
                         </div>
-                        <h1 className={'font-bold text-5xl'}>{frontmatter.title}</h1>
-                        <p className={'max-w-[60ch]'}>{frontmatter.description}</p>
-                        {!frontmatter.dateModified ? <time className={'opacity-70'}>{dateFormatted}</time> :
-                            <span className={'opacity-70'}>Aktualisiert am <time>{dateModifiedFormatted}</time></span>}
+                        <h1 className={'font-bold md:text-5xl text-3xl leading-[125%]'}>{frontmatter.title}</h1>
+                        <p className={'max-w-[60ch] leading-[150%] mb-6'}>{frontmatter.description}</p>
+                        {!frontmatter.dateModified ? <time className={'opacity-50 text-sm'}>{dateFormatted}</time> :
+                            <span className={'opacity-50 text-sm'}>Aktualisiert am <time>{dateModifiedFormatted}</time></span>}
                         <div className={'my-8 text-right leading-tight flex flex-col gap-2'}>
                             <img className={'rounded-4xl'} src={frontmatter.thumbnail}
                                  alt={frontmatter.thumbnail_alt}/>
@@ -89,16 +102,17 @@ export default async function PostPage({params,}: { params: Promise<{ slug: stri
 
                     </div>
                 </header>
-                <section className={'max-w-[65ch] mx-auto py-8'}>
+                <section className={'max-w-[65ch] mx-auto py-8 p-global'}>
                     <MDXRemote source={content} components={{...mdxComponents, ...components}}/>
                 </section>
-                <footer className={'max-w-[65ch] mx-auto'}>
+                <footer className={'max-w-[65ch] mx-auto p-global'}>
                     <div className={'mt-12'}>
                         <AuthorBlock author={frontmatter.author}/>
                     </div>
+                    <Sources sources={frontmatter.sources} />
                 </footer>
             </article>
-        </div>
+        </>
     );
 }
 
@@ -120,7 +134,7 @@ export async function generateMetadata({
             type: "article",
             publishedTime: frontmatter.date,
             modifiedTime: frontmatter.dateModified,
-            url: `https://meineblog.de/blog/${slug}`,
+            url: `https://sparkysbarn.de.de/blog/${slug}`,
             images: frontmatter.thumbnail
                 ? [{url: frontmatter.thumbnail, width: 1200, height: 630}]
                 : [],
@@ -132,7 +146,7 @@ export async function generateMetadata({
             images: frontmatter.thumbnail ? [frontmatter.thumbnail] : [],
         },
         alternates: {
-            canonical: `https://meineblog.de/blog/${slug}`,
+            canonical: `https://sparkysbarn.de/blog/${slug}`,
         },
     };
 }

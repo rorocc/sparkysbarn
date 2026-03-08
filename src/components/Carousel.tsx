@@ -19,10 +19,11 @@ function ArrowButton({
             aria-label={direction === "left" ? "Scroll left" : "Scroll right"}
             className={[
                 "hidden md:flex",
+                "hover:cursor-pointer",
                 "absolute top-1/2 -translate-y-1/2 z-20",
                 direction === "left" ? "-left-5" : "-right-5",
                 "w-11 h-11 rounded-full items-center justify-center",
-                "bg-white border border-zinc-200 shadow-lg",
+                "bg-white shadow-lg",
                 "transition-all duration-300 ease-out",
                 "hover:scale-110 hover:shadow-xl active:scale-95",
                 visible
@@ -39,7 +40,7 @@ function ArrowButton({
             >
                 <path
                     d="M11 4L6 9L11 14"
-                    stroke="#111"
+                    stroke="var(--color-primary)"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
