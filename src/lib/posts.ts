@@ -15,7 +15,7 @@ export interface PostMeta {
     thumbnail: string;
     thumbnail_source?: string;
     thumbnail_alt?: string;
-    categories?: string[];
+    categories: string[];
     sources?: {
         title: string;
         url?: string;
