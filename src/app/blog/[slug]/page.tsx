@@ -109,7 +109,7 @@ export default async function PostPage({params,}: { params: Promise<{ slug: stri
                     <div className={'mt-12'}>
                         <AuthorBlock author={frontmatter.author}/>
                     </div>
-                    <Sources sources={frontmatter.sources} />
+                    <Sources sources={frontmatter.sources ?? []} />
                 </footer>
             </article>
         </>
